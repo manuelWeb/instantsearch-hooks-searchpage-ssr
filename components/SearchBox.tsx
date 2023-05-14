@@ -48,6 +48,7 @@ export function SearchBoxBase(props: SearchBoxProps) {
 
   return (
     <ControlledSearchBox
+      // searchAsYouType={false}
       className={props.className}
       inputRef={inputRef}
       isSearchStalled={isSearchStalled}

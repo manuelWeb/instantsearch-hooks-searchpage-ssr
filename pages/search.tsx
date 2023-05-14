@@ -34,7 +34,7 @@ export default function Search() {
         <title>Search</title>
       </Head>
 
-      <div className="Container">
+      <div className="Container" style={{ display: 'flex' }}>
         <div>
           <RefinementFilter attribute="brand" />
           <RefinementFilter attribute="price" />

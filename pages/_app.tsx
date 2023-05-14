@@ -11,8 +11,10 @@ import {
 import { SearchBoxBase } from "../components/SearchBox";
 import { algoliaNextJsHistoryRouter } from "../components/router";
 import { GoToHomeButton } from "../components/GoToHomeButton";
+import { APP_ID, INSTANT_SEARCH_INDEX_NAME, SEARCH_API_KEY } from "../constants";
 
 const client = algoliasearch("latency", "6be0576ff61c053d5f9a3225e2a90f76");
+// const client = algoliasearch(APP_ID, SEARCH_API_KEY);
 
 const onStateChange = async (params: any) => {
   if (
