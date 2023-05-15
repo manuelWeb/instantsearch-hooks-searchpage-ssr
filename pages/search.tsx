@@ -5,7 +5,7 @@ import { Panel } from "../components/Panel";
 
 type HitProps = {
   hit: AlgoliaHit<{
-    name: string;
+    'fiche.nom': string;
     price: number;
   }>;
 };
@@ -13,7 +13,7 @@ type HitProps = {
 function Hit({ hit }: HitProps) {
   return (
     <>
-      <Highlight hit={hit} attribute="name" className="Hit-label" />
+      <Highlight hit={hit} attribute="fiche.nom" className="Hit-label" />
       <span className="Hit-price">${hit.price}</span>
     </>
   );
