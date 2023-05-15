@@ -54,6 +54,7 @@ export function SearchBoxBase(props: SearchBoxProps) {
       isSearchStalled={isSearchStalled}
       onChange={onChange}
       onReset={onReset}
+      onSubmit={props.onSubmit}
       placeholder={props.placeholder}
       value={value}
     />

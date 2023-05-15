@@ -17,12 +17,12 @@ const client = algoliasearch("latency", "6be0576ff61c053d5f9a3225e2a90f76");
 // const client = algoliasearch(APP_ID, SEARCH_API_KEY);
 
 const onStateChange = async (params: any) => {
-  if (
+  /* if (
     Object.keys(params.uiState.instant_search).length > 0 &&
     Router.pathname !== "/search"
   ) {
     await Router.push("/search", undefined, { shallow: true });
-  }
+  } */
 
   params.setUiState(params.uiState);
 };
@@ -57,7 +57,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         onStateChange={onStateChange}
         routing={routingRef.current}
       >
-        <SearchBoxBase />
+        <SearchBoxBase onSubmit={goToSearch} />
         <GoToHomeButton />
         <button onClick={goToSearch}>go to search</button>
         <Component {...pageProps} />
